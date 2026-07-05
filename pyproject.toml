@@ -1,0 +1,17 @@
+[project]
+name = "vikey-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "tosettil-polimi", email = "info@tosettil.me" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+vikey-mcp-server = "vikey_mcp_server:main"
+
+[build-system]
+requires = ["uv_build>=0.10.9,<0.11.0"]
+build-backend = "uv_build"
