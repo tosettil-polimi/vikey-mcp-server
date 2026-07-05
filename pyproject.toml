@@ -1,17 +1,11 @@
 [project]
 name = "vikey-mcp-server"
 version = "0.1.0"
-description = "Add your description here"
+description = "MCP Server per gestire le API di Vikey"
 readme = "README.md"
-authors = [
-    { name = "tosettil-polimi", email = "info@tosettil.me" }
-]
-requires-python = ">=3.12"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = ["fastmcp>=0.4.1", "httpx>=0.27.0"]
 
+# QUESTO È IL BLOCCO CRUCIALE PER UVX
 [project.scripts]
-vikey-mcp-server = "vikey_mcp_server:main"
-
-[build-system]
-requires = ["uv_build>=0.10.9,<0.11.0"]
-build-backend = "uv_build"
+vikey-mcp-server = "vikey_mcp_server.main:main"
