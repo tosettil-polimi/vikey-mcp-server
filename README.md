@@ -115,6 +115,39 @@ Add the following block to your MCP client configuration file.
 |---|---|---|---|
 | `resv_key` | `string` | **Yes** | Reservation identifier (e.g. `29FG3DI6`) |
 
+## Prompt utili
+
+Prompt pronti all'uso da incollare in chat (Cursor/Claude) con il tool `vikey` mcp attivo. Incorporano gli accorgimenti emersi nell'uso reale (es. esclusione delle prenotazioni cancellate).
+
+### Totale prenotazioni Airbnb / Booking per un mese
+
+```
+Usa il vikey mcp per calcolare il totale delle prenotazioni con check-in a [MESE] [ANNO] per l'appartamento [NOME APPARTAMENTO], separando i totali per canale Airbnb e Booking.
+
+Regole:
+- Recupera le prenotazioni con `list_reservations`.
+- Escludi le prenotazioni con `DEL=1` (cancellate). NON fidarti del campo `canc`, che risulta spesso sempre a 0 anche per prenotazioni cancellate: usa `DEL`.
+- Se trovi coppie di prenotazioni con stesso ospite, stesse date e stesso importo ma `resv_key` diverso, tienine solo una: verifica `DEL` per capire quale delle due è quella valida (DEL=0) e quale è la cancellata/duplicata (DEL=1).
+- Conta come "del mese" le prenotazioni il cui check-in (`date_from`) cade nel mese richiesto.
+- Per ciascun canale mostrami: numero di prenotazioni e totale importo (`price`).
+- Poi elencami il dettaglio riga per riga (check-in → check-out, canale, ospite, importo), ordinato per data di check-in.
+```
+
+### Calcolo tassa di soggiorno per un mese
+
+```
+Usa il vikey mcp per calcolare il totale della tassa di soggiorno maturata per i soggiorni di [MESE] [ANNO] nell'appartamento [NOME APPARTAMENTO].
+
+Regole:
+- Recupera le prenotazioni con `list_reservations` e leggi la tariffa dal campo `city_tax_params` (es. importo per persona a notte in `perperson_price`, tetto massimo di notti tassabili per singolo soggiorno in `perperson_maxdays`).
+- Escludi le prenotazioni con `chk_citytax=0` (tassa non applicabile) e quelle con `DEL=1` (cancellate). NON fidarti del campo `canc`, spesso sempre a 0: usa `DEL`.
+- Se trovi coppie di prenotazioni con stesso ospite, stesse date e stesso importo ma `resv_key` diverso, tienine solo una valida (verifica `DEL`: la cancellata ha `DEL=1`).
+- Per ogni soggiorno calcola le notti totali (`date_to` - `date_from`), poi applica il tetto (notti tassabili = min(notti totali, `perperson_maxdays`)), contando il tetto a partire dal check-in.
+- Se il soggiorno è a cavallo tra due mesi, conta solo le notti tassabili che ricadono nel mese richiesto (es. per un soggiorno a cavallo maggio/giugno, nel calcolo di giugno conta solo le notti di giugno).
+- Formula per riga: tassa = tariffa_per_persona × `guests_num` × notti_tassabili_nel_mese.
+- Mostrami il dettaglio riga per riga (check-in → check-out, canale, ospite, ospiti, notti tassabili nel mese, importo) e il totale finale del mese.
+```
+
 ## Development
 
 ```bash
