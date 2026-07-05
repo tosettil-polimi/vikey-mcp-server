@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_call:  # allows bump-version.yml to invoke this workflow directly
 
 jobs:
   publish:
