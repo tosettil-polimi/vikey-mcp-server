@@ -133,7 +133,12 @@ Releases are automated via GitHub Actions. Use the **Bump version** workflow fro
 
 1. Bump the version in `pyproject.toml`
 2. Create and push the corresponding `vX.Y.Z` tag
-3. Trigger the **Publish** workflow, which builds and pushes the package to PyPI
+3. The tag push triggers the **Publish** workflow, which builds and pushes the package to PyPI
+
+### One-time setup
+
+- **PyPI Trusted Publisher**: on [pypi.org](https://pypi.org), configure a trusted publisher for this project pointing at `tosettil-polimi/vikey-mcp-server`, workflow `publish.yml`. No `PYPI_API_TOKEN` is required.
+- **`RELEASE_PAT` repository secret**: create a fine-grained Personal Access Token with `contents: write` permission on this repo and add it as the `RELEASE_PAT` secret. This is required because pushes made with the default `GITHUB_TOKEN` do **not** trigger other workflows (GitHub's anti-loop protection), so without a PAT the tag pushed by `bump-version.yml` would never trigger `publish.yml`.
 
 ## License
 
