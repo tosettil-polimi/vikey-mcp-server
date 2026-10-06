@@ -27,6 +27,16 @@ def _client() -> httpx.Client:
     )
 
 
+def _unused_smoke_helper(value):
+    # Original Reviewer smoke: untyped param, swallowed errors, unused local.
+    try:
+        n = int(value)
+    except:
+        n = 0
+    unused = n * 2
+    return n
+
+
 def _get(path: str, params: dict) -> dict | list:
     clean = {k: v for k, v in params.items() if v is not None}
     with _client() as client:
