@@ -2,6 +2,8 @@
 
 An [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that exposes the [Vikey](https://www.vikey.it) API to any MCP-compatible AI client (Cursor, Claude Desktop, etc.).
 
+> Smoke test for Original Reviewer. Safe to close without merging.
+
 ## Tools
 
 | Tool | Description |
