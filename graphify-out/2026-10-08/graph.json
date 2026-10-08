@@ -1,30 +1,15 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "schema_version": 1,
-    "graphify_version": "0.9.79"
-  },
+  "graph": {},
   "nodes": [
-    {
-      "id": "src_vikey_mcp_server_main_list_locals",
-      "label": "list_locals()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "list_locals",
-      "file_type": "code",
-      "norm_label": "list_locals()",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L99"
-    },
     {
       "id": "src_vikey_mcp_server_main_client",
       "label": "_client()",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 0,
+      "community_name": "_get",
       "file_type": "code",
       "norm_label": "_client()",
       "source_file": "src/vikey_mcp_server/main.py",
@@ -35,12 +20,48 @@
       "label": "_get()",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 0,
+      "community_name": "_get",
       "file_type": "code",
       "norm_label": "_get()",
       "source_file": "src/vikey_mcp_server/main.py",
       "source_location": "L40"
+    },
+    {
+      "id": "src_vikey_mcp_server_main_get_reservation_detail",
+      "label": "get_reservation_detail()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "_get",
+      "file_type": "code",
+      "norm_label": "get_reservation_detail()",
+      "source_file": "src/vikey_mcp_server/main.py",
+      "source_location": "L125"
+    },
+    {
+      "id": "src_vikey_mcp_server_main_get_reservation_services",
+      "label": "get_reservation_services()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "_get",
+      "file_type": "code",
+      "norm_label": "get_reservation_services()",
+      "source_file": "src/vikey_mcp_server/main.py",
+      "source_location": "L135"
+    },
+    {
+      "id": "src_vikey_mcp_server_main_list_locals",
+      "label": "list_locals()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "_get",
+      "file_type": "code",
+      "norm_label": "list_locals()",
+      "source_file": "src/vikey_mcp_server/main.py",
+      "source_location": "L99"
     },
     {
       "id": "src_vikey_mcp_server_main_main",
@@ -67,28 +88,16 @@
       "source_location": "L30"
     },
     {
-      "id": "src_vikey_mcp_server_main_get_reservation_services",
-      "label": "get_reservation_services()",
+      "id": "src_vikey_mcp_server_main_list_external_reservations",
+      "label": "list_external_reservations()",
       "_callable": true,
       "_origin": "ast",
-      "community": 10,
-      "community_name": "Tools",
+      "community": 3,
+      "community_name": "Tool reference",
       "file_type": "code",
-      "norm_label": "get_reservation_services()",
+      "norm_label": "list_external_reservations()",
       "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L135"
-    },
-    {
-      "id": "src_vikey_mcp_server_main_get_reservation_detail",
-      "label": "get_reservation_detail()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "get_reservation_detail",
-      "file_type": "code",
-      "norm_label": "get_reservation_detail()",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L125"
+      "source_location": "L54"
     },
     {
       "id": "src_vikey_mcp_server_main_list_reservations",
@@ -103,23 +112,22 @@
       "source_location": "L73"
     },
     {
-      "id": "src_vikey_mcp_server_main_list_external_reservations",
-      "label": "list_external_reservations()",
-      "_callable": true,
+      "id": "tool",
+      "label": "tool",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "list_external_reservations",
+      "community": 0,
+      "community_name": "_get",
       "file_type": "code",
-      "norm_label": "list_external_reservations()",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L54"
+      "norm_label": "tool",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "readme_list_locals",
       "label": "`list_locals`",
       "_origin": "ast",
       "community": 0,
-      "community_name": "list_locals",
+      "community_name": "_get",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`list_locals`",
@@ -127,15 +135,49 @@
       "source_location": "L99"
     },
     {
+      "id": "readme_tools",
+      "label": "Tools",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "_get",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tools",
+      "source_file": "README.md",
+      "source_location": "L7"
+    },
+    {
       "id": "src_vikey_mcp_server_main_rationale_105",
       "label": "List properties (locals/apartments). Args: date_from: Filter apartments created\u2026",
       "_origin": "ast",
       "community": 0,
-      "community_name": "list_locals",
+      "community_name": "_get",
       "file_type": "rationale",
       "norm_label": "list properties (locals/apartments). args: date_from: filter apartments created...",
       "source_file": "src/vikey_mcp_server/main.py",
       "source_location": "L105"
+    },
+    {
+      "id": "src_vikey_mcp_server_main_rationale_126",
+      "label": "Retrieve the detail of a single reservation. Args: resv_key: Mandatory\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "_get",
+      "file_type": "rationale",
+      "norm_label": "retrieve the detail of a single reservation. args: resv_key: mandatory...",
+      "source_file": "src/vikey_mcp_server/main.py",
+      "source_location": "L126"
+    },
+    {
+      "id": "src_vikey_mcp_server_main_rationale_136",
+      "label": "Retrieve services (payment details) associated with a reservation. Args:\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "_get",
+      "file_type": "rationale",
+      "norm_label": "retrieve services (payment details) associated with a reservation. args:...",
+      "source_file": "src/vikey_mcp_server/main.py",
+      "source_location": "L136"
     },
     {
       "id": "src_vikey_mcp_server_init",
@@ -158,51 +200,6 @@
       "norm_label": "main.py",
       "source_file": "src/vikey_mcp_server/main.py",
       "source_location": "L1"
-    },
-    {
-      "id": "readme_tools",
-      "label": "Tools",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Tools",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tools",
-      "source_file": "README.md",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_vikey_mcp_server_main_rationale_136",
-      "label": "Retrieve services (payment details) associated with a reservation. Args:\u2026",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Tools",
-      "file_type": "rationale",
-      "norm_label": "retrieve services (payment details) associated with a reservation. args:...",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L136"
-    },
-    {
-      "id": "tool",
-      "label": "tool",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "get_reservation_detail",
-      "file_type": "code",
-      "norm_label": "tool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_vikey_mcp_server_main_rationale_126",
-      "label": "Retrieve the detail of a single reservation. Args: resv_key: Mandatory\u2026",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "get_reservation_detail",
-      "file_type": "rationale",
-      "norm_label": "retrieve the detail of a single reservation. args: resv_key: mandatory...",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L126"
     },
     {
       "id": "readme",
@@ -313,6 +310,18 @@
       "source_location": "L114"
     },
     {
+      "id": "readme_list_external_reservations",
+      "label": "`list_external_reservations`",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Tool reference",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "`list_external_reservations`",
+      "source_file": "README.md",
+      "source_location": "L83"
+    },
+    {
       "id": "readme_tool_reference",
       "label": "Tool reference",
       "_origin": "ast",
@@ -323,6 +332,17 @@
       "norm_label": "tool reference",
       "source_file": "README.md",
       "source_location": "L81"
+    },
+    {
+      "id": "src_vikey_mcp_server_main_rationale_58",
+      "label": "Retrieve all reservations via the external API endpoint. Args: last_updated:\u2026",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Tool reference",
+      "file_type": "rationale",
+      "norm_label": "retrieve all reservations via the external api endpoint. args: last_updated:...",
+      "source_file": "src/vikey_mcp_server/main.py",
+      "source_location": "L58"
     },
     {
       "id": "readme_calcolo_tassa_di_soggiorno_per_un_mese",
@@ -458,32 +478,8 @@
       "version": "0.1.3"
     },
     {
-      "id": "readme_list_external_reservations",
-      "label": "`list_external_reservations`",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "list_external_reservations",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "`list_external_reservations`",
-      "source_file": "README.md",
-      "source_location": "L83"
-    },
-    {
-      "id": "src_vikey_mcp_server_main_rationale_58",
-      "label": "Retrieve all reservations via the external API endpoint. Args: last_updated:\u2026",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "list_external_reservations",
-      "file_type": "rationale",
-      "norm_label": "retrieve all reservations via the external api endpoint. args: last_updated:...",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L58"
-    },
-    {
       "id": "fastmcp",
       "label": "fastmcp",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "main.py",
       "external": true,
@@ -495,7 +491,6 @@
     {
       "id": "httpx",
       "label": "httpx",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "main.py",
       "external": true,
@@ -507,7 +502,6 @@
     {
       "id": "os",
       "label": "os",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "main.py",
       "external": true,
@@ -519,7 +513,6 @@
     {
       "id": "typing",
       "label": "typing",
-      "_origin": "semantic",
       "community": 1,
       "community_name": "main.py",
       "external": true,
@@ -530,18 +523,6 @@
     }
   ],
   "links": [
-    {
-      "source": "src_vikey_mcp_server_main_client",
-      "target": "httpx",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/vikey_mcp_server/main.py",
-      "source_location": "L23",
-      "weight": 1.0
-    },
     {
       "source": "src_vikey_mcp_server_main_get",
       "target": "src_vikey_mcp_server_main_client",

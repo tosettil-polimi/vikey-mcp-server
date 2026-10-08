@@ -1,5 +1,5 @@
 {
-  "0": "list_locals",
+  "0": "_get",
   "1": "main.py",
   "2": "vikey-mcp-server",
   "3": "Tool reference",
@@ -7,8 +7,5 @@
   "5": "Installation",
   "6": "list_reservations",
   "7": "Release workflow",
-  "8": "vikey-mcp-server",
-  "9": "list_external_reservations",
-  "10": "Tools",
-  "11": "get_reservation_detail"
+  "8": "vikey-mcp-server"
 }
